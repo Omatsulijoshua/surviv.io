@@ -1,0 +1,20 @@
+{
+  "name": "surviv-io-browser-battle-royale",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace=@surviv/web",
+    "dev:server": "npm run dev --workspace=@surviv/server",
+    "build": "npm run build --workspace=@surviv/server && npm run build --workspace=@surviv/web",
+    "test": "npm run test --workspace=@surviv/server",
+    "lint": "echo \"Lint not configured yet\""
+  },
+  "devDependencies": {
+    "browserslist": "^4.28.2",
+    "caniuse-lite": "^1.0.30001792"
+  }
+}

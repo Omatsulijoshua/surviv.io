@@ -1,0 +1,26 @@
+node_modules
+dist
+coverage
+.env
+.env.local
+*.log
+*.tsbuildinfo
+apps/web/.vite
+apps/server/dist
+replays
+
+# Unity generated/editor-local files
+Library/
+Temp/
+Obj/
+Build/
+Builds/
+Logs/
+UserSettings/
+MemoryCaptures/
+Recordings/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs

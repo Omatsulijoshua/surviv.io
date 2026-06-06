@@ -1,0 +1,51 @@
+openapi: 3.1.0
+info:
+  title: Surviv Browser Royale API
+  version: 1.0.0
+servers:
+  - url: http://localhost:4000
+paths:
+  /api/health:
+    get:
+      summary: Health check
+      responses:
+        "200":
+          description: Healthy
+  /api/auth/register:
+    post:
+      summary: Register a new account
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password, displayName]
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+                displayName:
+                  type: string
+      responses:
+        "201":
+          description: Account created
+  /api/auth/login:
+    post:
+      summary: Login and receive a JWT
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password]
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        "200":
+          description: Authenticated
